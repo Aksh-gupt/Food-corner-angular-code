@@ -1,0 +1,40 @@
+@media (min-width: 768px){
+    div.stiky{
+        position: sticky;
+        top: 10px;
+    }
+}
+
+@media (max-width: 768px){
+    
+    position: relative;
+}
+
+.box{
+    width: 97%;
+    margin-left: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #aaa;
+    margin-bottom: 20px;
+    font-family: Lucida Console, Courier, monospace;
+}
+.content{
+    padding-top: 8px;
+    padding-left: 15px;
+}
+.simple{
+    display: flex;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.simple .text h5{
+    font-family: fantasy;
+}
+.simple:hover .text h5{
+    color: #f00;
+}
+.text{
+    font-weight: 600;
+    font-family: cursive;
+    margin-left: 5%;
+}

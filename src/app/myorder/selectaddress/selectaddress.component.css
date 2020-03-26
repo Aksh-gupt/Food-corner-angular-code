@@ -1,0 +1,151 @@
+.box{
+    background-color: #fff;
+    margin: 15px 0px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.4);
+    padding-bottom: 20px;
+  }
+  .one{
+    width: 96%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.notselectedadd{
+    border: 1px solid #aaa;
+}
+.selectedadd{
+    border: 2px solid rgb(255, 45, 45);
+}
+.orderid{
+    position: relative;
+    background: #ddd;
+    display: flex;
+    padding: 3px;
+}
+.notselectedadd .orderid{
+    border-bottom: 1px solid #aaa;
+}
+.selectedadd .orderid{
+    border-bottom: 2px solid rgb(255, 45, 45);
+}
+.oid{
+    margin-left: 15px;
+    padding: 5px 14px;
+    width: 155px;
+    font-size: 16px;
+    color: rgb(255, 45, 45);
+    font-weight: bold;
+    font-family: "Gill Sans", sans-serif;
+}
+.canbtn{
+    position: absolute;
+    right: 130px; 
+    background-color: rgb(255, 45, 45);
+    padding: 6px 5px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    font-family: "Gill Sans", sans-serif;
+}
+.canbtn2{
+    position: absolute;
+    right: 20px;
+    background-color: rgb(255, 45, 45);
+    padding: 6px 5px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    font-family: "Gill Sans", sans-serif;
+}
+button:focus{
+    outline: none;
+}
+.ingres{
+    margin-top: 10px;
+    padding-left: 30px;
+}
+.cancel{
+    border: none;
+    background: none;
+    color: rgb(255, 45, 45);
+    font-weight: bold;
+    margin-left: 30px;
+}
+.addr{
+    width: 95%;
+    padding-left: 15px;
+    padding-top: 7px;
+    margin: auto;
+    margin-top: 15px;
+    border: 1px solid #aaa;
+}
+textarea{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    width: 62%;
+    padding: 11px;
+    padding-bottom: 0;
+    background: rgb(240, 237, 237);
+}
+textarea:focus{
+    background-color: #fff;
+    outline :none;
+}
+.addr h5{
+    margin-bottom: 15px;
+    color: #f4511e;
+    font-weight: bold;
+}
+.name{
+    display: flex;
+}
+
+.first{
+    border-radius: 3px;
+    background: rgb(240, 237, 237);
+
+    height: 40px;
+    border: 1px solid #aaa;
+    padding-left: 10px;
+    font-size: 15px;
+}
+input:focus{
+    outline: none;
+}
+.first:focus{
+    background-color: #fff;
+}
+
+.pers{
+    width: 30%;
+}
+.sub{
+    background-color: #f4511e;
+    color: #fff;
+    border: none;
+    box-shadow: 1px 1px 1px #ccc;
+    padding: 10px 32px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.sub:focus{
+    outline: none;
+}
+.newadd{
+    width: 95%;
+    margin:auto;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+.newadd p{
+    padding: 11px 10px;
+    padding-bottom: 0px;
+    margin-left: 15px;
+    color: #f4511e;
+    font-size: 20px;
+}
+.notsele{
+    opacity: 0.6;
+    cursor: not-allowed;
+}

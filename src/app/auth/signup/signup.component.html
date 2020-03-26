@@ -1,0 +1,27 @@
+<div class="row">
+    <div class ="box">
+        <h2>SignUp</h2>
+        <form (ngSubmit)="signupreq(f)" #f="ngForm" >
+            <div class="inputbox">
+                <input type="text" name="firstname" autocomplete="off"  ngModel required>
+                <label>Firstname</label>
+            </div>
+            <div class="inputbox"> 
+                <input type="text" name="lastname" autocomplete="off"  ngModel required>
+                <label>Lastname</label>
+            </div>
+            <div class="inputbox">
+                <input type="email" name="email" autocomplete="off"  ngModel required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+                <label>Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="password" id="password" autocomplete="off"  minlength="7" ngModel required>
+                <p (click)="togglePass()" ><i class="fa fa-eye" id="eye"></i></p>
+                <label>Password</label>
+                <h5> </h5>
+            </div>
+            <input type="submit" name="">
+        </form>
+        <p>Already have account <a routerLink = "/signin" >Login now</a></p>
+    </div>
+</div>

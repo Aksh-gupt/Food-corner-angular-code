@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+        <div class=total style="background-color: #fff;" >
+            <div class="heading">
+                <h5>My WishList</h5>
+            </div>
+            <hr />
+            <div class="one" *ngFor="let like of LikeArray;let i = index" >
+                <img [src]="like.image_url" 
+                    alt={{like.idrecipe}} height="90" width="100" />
+                <div class="text">
+                    <h4>{{like.title}}</h4>
+                    <button type="button" class="btn" (click)="removeLike(i)" >REMOVE</button>
+                    <div class="abs">
+                        <svg stroke="black" fill="#f00">
+                            <path d="M17.19 4.155c-1.672-1.534-4.383-1.534-6.055 0l-1.135 1.042-1.136-1.042c-1.672-1.534-4.382-1.534-6.054 0-1.881 1.727-1.881 4.52 0 6.246l7.19 6.599 7.19-6.599c1.88-1.726 1.88-4.52 0-6.246z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            
+        </div>
+    </div>
+</div>

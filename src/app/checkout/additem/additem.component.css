@@ -1,0 +1,31 @@
+.total{
+    margin: auto;
+    box-sizing: border-box;
+    width: 97%;
+    margin-top: 10px;
+    box-shadow: 0 0 10px #aaa;
+    margin-bottom: 20px;
+    
+} 
+.header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left : 9px;
+    padding-top: 3px;
+}
+.row{
+    margin: auto;
+}
+form{
+    padding: 0;
+    margin-top: 0px;
+    margin: auto;
+}
+.form-group{
+    margin: auto;
+    width: 95%;
+    margin-bottom: 10px;
+}
+button{ 
+    margin-left: 9px;
+    margin-bottom: 10px;
+}

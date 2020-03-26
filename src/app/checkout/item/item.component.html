@@ -1,0 +1,26 @@
+<div class="total" style="background-color: #fff;" >
+    <div class="heading">
+        <h5>My Cart</h5>
+    </div>
+    <hr />
+    <ul class="ingre" *ngFor="let ing of ingredients;let i = index">
+        <li>
+            <p> {{ing.count}}{{ing.unit}} {{ing.ingredient}}</p>
+            <div class="name">
+                <p><i class="fa fa-minus-circle fas" (click)="decreaseAmount(i)" ></i> &nbsp;&nbsp;&nbsp;
+                <span class="amou">{{ing.count}}</span> &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-plus-circle fas" (click)="increaseAmount(i)" ></i></p>
+                <button type="button" class="remo" (click)="removeIngredient(i)" >
+                    REMOVE
+                </button>
+            </div>
+            <hr style="left: -20px;" />
+        </li>
+    </ul>
+    <div class="order">
+        <button type="button" class="place" (click)="placeOrder()" >Place order</button>
+    </div>
+</div>
+<!-- <div class="total empty" *ngIf="ingredients == []" >
+    <h3 class="text" ><i class="fa fa-shopping-cart"></i> &nbsp;Your cart is empty</h3>
+</div> -->

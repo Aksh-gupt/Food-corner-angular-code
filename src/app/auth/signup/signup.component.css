@@ -1,0 +1,93 @@
+.row{
+	margin : 0;
+	padding : 0;
+	font-family: sans-serif;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.box{
+	position : absolute;
+	margin : auto;
+	padding : 10px;
+	top : 9%;
+	background-color: rgba(0,0,0,0.85);
+	border-radius: 10px;
+}
+.box h2{
+	margin : 30px auto;
+	padding: 0;
+	text-align: center;
+	color : #fff;
+}
+.box .inputbox{
+	position: relative;
+}
+.inputbox p{
+	position: absolute;
+	top: 35%;
+	right: 10%; 
+}
+.box .inputbox input{
+	margin : 30px;
+	padding : 0;
+	height : 30px;
+	width : 400px;
+	color : #fff;
+	border : none;
+	outline: none;
+	border-bottom: 1px solid #fff;
+	background-color: transparent;
+	font-size : 15px;
+}
+label{
+	position : absolute;
+	margin : 0px;
+	padding : 0px;
+	top : 35px;
+	left : 30px;
+	color : #fff;
+	transition: 0.5s;
+	pointer-events: none;
+}
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label{
+	transform: translateY(-120%);
+	color : rgba(51,0,255,1);
+	font-size: 13px;
+}
+.inputbox .ng-touched.ng-invalid ~ label{
+	transform: translateY(-120%);
+	color : #f00;
+	font-size: 13px;
+}
+.inputbox h5{
+	margin-left: 30px;
+}
+.inputbox input[type="password"].ng-touched.ng-invalid ~ h5::before{
+	content: "Password length must be greater than 7";
+	font-weight: 100;
+	color: #f00;
+}
+.box input[type = "submit"]{
+	background-color: rgba(51,0,255,1);
+	border : none;
+	border-radius: 5px;
+	padding : 10px 15px;
+	font-size: 13px;
+	color : #fff;
+	letter-spacing: 1px;
+	margin : 30px;
+}
+.ng-invalid input[type="submit"]{
+	pointer-events: none;
+	opacity: 0.6;
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.box p{
+	color: #fff;
+	margin-left: 30px;
+	font-weight: bold;
+}

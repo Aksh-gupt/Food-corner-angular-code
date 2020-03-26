@@ -1,0 +1,72 @@
+.total{
+    margin: auto;
+    box-sizing: border-box;
+    width: 97%;
+    margin-top: 10px;
+    box-shadow: 0 0 10px #aaa;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    
+}
+.heading h5{
+    height: 13px;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    color: #212121;
+}
+.one{
+    width: 96%;
+    margin: auto;
+    border: 1px solid #aaa;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.orderid{
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    background: #ddd;
+    padding: 10px;
+    display: flex;
+}
+.oid{
+    margin-left: 15px;
+    background-color: rgb(255, 45, 45);
+    padding: 10px 14px;
+    width: 155px;
+    color: #fff;
+    font-family: "Gill Sans", sans-serif;
+}
+.canbtn{
+    position: absolute;
+    right: 15px;
+    background-color: rgb(255, 45, 45);
+    padding: 10px 14px;
+    width: 155px;
+    color: #fff;
+    border: none;
+    font-family: "Gill Sans", sans-serif;
+}
+button:focus{
+    outline: none;
+}
+.ingres{
+    margin-top: 10px;
+}
+ul li{
+    list-style-type: circle;
+}
+.end{
+    display: flex;
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+#pri{
+    position: absolute;
+    right: 30px;
+}

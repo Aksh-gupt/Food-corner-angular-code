@@ -1,0 +1,149 @@
+ h2{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     margin-left: 15px;
+     margin-bottom: 30px;
+ }
+
+ .left{
+     box-sizing: border-box;
+     box-shadow : 0 0 20px #aaa;
+     border-radius: 15px;
+     border: 1px solid #000;
+     margin: auto;
+     width: 97%;
+ }
+ img{
+     margin: auto;
+     width: 93%;
+     border-radius: 15px;
+     margin-bottom: 30px;
+ }
+ .rating{
+    padding: 2px 7px;
+    border-radius: 14px;
+    font-size: 16px;
+    background-color: #26a541;
+    vertical-align: baseline;
+    line-height: normal;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-left: 15px;
+ }
+
+ .add_to_cart, .cooking{
+    
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    border: none;
+    color: #fff;
+    font-family: Roboto,Arial,sans-serif;
+    
+    border-radius: 2px;
+    
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: box-shadow .2s ease;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    margin-bottom: 30px;
+ }
+ .cooking{
+     background-color: #ff9f00;
+     width: 44%;
+     margin-left: 15px;
+     padding: 14px 14px;
+ }
+ .add_to_cart{
+     background: #fb641b;
+     width: 44%;
+     float: right;
+     padding: 14px 30px;
+     margin-right: 15px;
+ }
+ 
+ h4{
+     margin-left: 15px;
+     font-weight: bold;
+     margin-bottom: 25px;
+ }
+
+svg {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: currentColor; 
+}
+.ingre{
+    margin-right: 15px;
+}
+.serve{
+    position: relative;
+}
+.serve svg{
+    position: absolute;
+    cursor: pointer;
+    padding-top : 3px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    top: 20px;
+    transition: 0.3s;
+}
+#right:hover .serve svg{
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+}
+#first{
+    left: 120px;
+}
+#second{
+    left: 206px;
+}
+.ite{
+    position: absolute;
+    left: 150px;
+    width: 10px;
+    margin:auto;
+    text-align: center;
+    border: 1px solid #aaa;
+    padding: 1px 16px;
+    padding-right: 25px;
+    padding-top: 2px;
+}
+.time svg{
+    padding-top: 4px;
+    font-size: 14px;
+}
+@media (max-width: 768px){
+    #right{
+        margin-top: 15px;
+    }
+}
+#available {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.inp{
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.inp::-webkit-inner-spin-button, 
+.inp::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.btn-primary{
+    height: 30px;
+    margin-bottom: 4px;
+    margin-left: 10px;
+}

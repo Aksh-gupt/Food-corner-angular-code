@@ -1,0 +1,37 @@
+<div class="total" style="background-color: #fff;" >
+    <div class="heading"> 
+        <h5>My Order</h5>
+    </div>
+    <div *ngIf="showdata;else noOrder">
+    <div *ngFor="let order of recieveOrder;let i=index">
+        <div class="one">
+            <div class="orderid">
+                <div class="oid">{{order._id}}</div>
+                <button type="button" class="canbtn" *ngIf="!order.completed && !order.deleted" (click)="cancelOrder(i)" >
+                    Cancel
+                </button>
+                <button type="button" class="helpbtn" *ngIf="!order.completed && !order.deleted" (click)="help()" >
+                        Help
+                </button>
+                <button type="button" class="canbtn dis" *ngIf="order.deleted"  disabled >
+                    Deleted
+                </button>
+            </div>
+            <ul class="ingres" *ngFor="let ingr of order.ingredientOrder">
+                <li>{{ingr.count}}{{ingr.unit}} {{ingr.ingredient}} </li>
+            </ul>
+            <div class="end">
+                <p><span style="color: rgb(165, 165, 165)">Order On</span> {{order.date}}</p>
+                <p id="pri">
+                    <span style="color: rgb(165, 165, 165)">Order Total</span> &nbsp;
+                    <span style="font-weight: bold;">₹900</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <ng-template #noOrder >
+        <hr>
+        <p style="font-weight: bold; margin-left: 15px;">NO Order yet<a routerLink="/" > Start shopping</a></p>
+    </ng-template>
+</div>

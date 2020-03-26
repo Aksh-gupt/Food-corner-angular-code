@@ -1,0 +1,140 @@
+
+<div class="col-md-4">
+  <div class="box" style="background-color: #fff;" >
+    <!-- <div class="img1">
+      <img src={{imageurl}} class="img-responsive" style="border-radius: 5px;" />
+      <div class="txt1">
+        
+      </div>
+    </div> -->
+    <div class="txt2">
+      <p style="font-weight: bold; margin-left: 20px;">Hello, {{user.firstname}}</p>
+      <p *ngIf="user.gender !== ''">
+        <i class="fa fa-user"></i>
+        &nbsp;&nbsp; {{user.gender}}
+      </p>
+      <p><i class="fa fa-envelope"></i> {{user.email}}</p>
+      <p *ngIf="user.mobile_number !== ''" style="margin-bottom: 20px;">
+        <i class="fa fa-phone"></i>&nbsp; {{user.mobile_number}}
+      </p> 
+    </div>
+  </div>
+  <div class="box" style="background-color: #fff;" >
+      <form (ngSubmit)="changePassword(p)" #p="ngForm" >
+          <div class="txt4" style="padding-top: 25px;">
+              <h4>Change Password</h4>
+              <input type="text" class="first pas" name="password"
+                placeholder="Type current Password" ngModel />
+              <br>
+              <input type="text" class="first pas" name="newpassword"
+                placeholder="New password" ngModel />
+              <br>
+              <input type="text" class="first pas" name="renewpassword"
+                placeholder="Retype new password" ngModel />
+              <br>
+              <button type="submit" class="sub">Save</button>
+          </div>
+      </form>
+  </div>
+</div>
+<div class="col-md-8">
+  <div class="box" style="background-color: #fff;" > 
+    <p style="padding: 25px; font-size: 35px;"><i class="fa fa-user-secret" style="color: #f4511e;"></i> Profile</p>
+    <!-- <input type="file" (change)="onFileSelect($event)" ng-accept="'.jpg,.png,.jpeg'">
+    <button type="button" (click)="upload()">Upload</button> -->
+    <form (ngSubmit)="updateUser(f)" #f="ngForm" >
+      <div class="txt4">
+        <h4>Personal Information</h4>
+        <div class="name">
+        <input type="text" class="first pers"
+            name="firstname" placeholder="Firstname" ngModel />
+        <input type="text" class="first pers" name="lastname"
+          style="margin-left: 15px;" placeholder="Lastname" ngModel />
+        </div>
+        <p style="margin-top: 20px;">Your Gender</p>
+        <div class="name">
+            <label class="cont" style="font-weight: 500;">Male
+            <input type="radio" checked="checked" name="gender" value="male" ngModel>
+            <span class="checkmark"></span>
+            </label>
+            <label class="cont" style="font-weight: 400;">Female
+            <input type="radio" name="gender" value="female" ngModel>
+            <span class="checkmark"></span>
+            </label>
+        </div>
+        <hr class="col-md-10 col-md-offset-1" />
+        <h4>Email</h4>
+        <input type="text" class="first emal"
+          name="email" placeholder="Email" ngModel/>
+        <hr class="col-md-10 col-md-offset-1" />
+        <h4>Mobile Number</h4>
+        <input type="number" class="first num" name="mobile_number"
+            placeholder="Mobile Number" ngModel />
+        <br>
+        <button type="submit" class="sub">Save</button>
+      </div>
+    </form>
+  </div>
+  <div class="box" style="background-color: #fff;" >
+      <p style="padding: 25px; font-size: 25px;"><i class="fa fa-address-card" style="color: #f4511e;"></i> Manage Address</p>
+      <div *ngFor="let add of addressArray;let i = index" >
+          <div class="one" *ngIf="!showAddressBool[i]" >
+              <div class="orderid">
+                  <div class="oid">Address {{i+1}}</div>
+                  <button type="button" class="canbtn" (click)="updateAddressMode(i)" >
+                    Update
+                  </button>
+                  <button type="button" class="canbtn2" (click)="deleteAddress(i)">
+                      Delete
+                  </button>
+              </div>
+              <div class="ingres">
+                <p style="font-weight: bold;" >{{add.name}}</p>
+                <p>{{add.address}}</p>
+                <p style="font-weight: bold;" >{{add.pincode}}</p>
+              </div>
+          </div>
+          <div class="addr" *ngIf="showAddressBool[i]">
+            <h5>UPDATE ADDRESS</h5>
+            <form (ngSubmit)="updateAddress(u,i)" #u="ngForm" >
+              <div class="name">
+                  <input type="text" class="first pers" value="aksh"
+                      name="name" placeholder={{add.name}} ngModel required />
+                  <input type="number" class="first pers" name="pincode"
+                    style="margin-left: 15px;" placeholder={{add.pincode}} ngModel required />
+              </div> 
+              <div style="margin-bottom: 0%">
+              <textarea type="text"
+                    name="address" placeholder={{add.address}} rows="4" ngModel required></textarea>
+              </div>
+              <button type="submit" class="sub">Save</button>
+              <button type="button" class="cancel" (click)="updateAddressMode(i)">
+                Cancel
+              </button>
+            </form>
+          </div>
+      </div>
+      <div class="newadd" (click)="changenewadd()" *ngIf="!addnewAddress" >
+        <p><i class="fa fa-plus"></i>&nbsp;&nbsp; Add new address</p>
+      </div>
+      <div class="addr" *ngIf="addnewAddress">
+        <h5>ADD NEW ADDRESS</h5>
+        <form (ngSubmit)="addAddress(a)" #a="ngForm" >
+          <div class="name">
+              <input type="text" class="first pers" 
+                  name="name" placeholder="Name" ngModel required />
+              <input type="number" class="first pers" name="pincode"
+                style="margin-left: 15px;" placeholder="Pincode" ngModel required />
+          </div> 
+          <div style="margin-bottom: 0%">
+          <textarea type="text"
+                name="address" placeholder="Address" rows="4" ngModel required></textarea>
+          </div>
+          <button type="submit" class="sub">Save</button>
+          <button type="button" class="cancel" (click)="changenewadd()">
+              Cancel
+            </button>
+        </form>
+      </div>
+  </div> 
+</div>

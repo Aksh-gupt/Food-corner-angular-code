@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="total"  style="background-color: #fff;" >
+        <div class="header">
+            <h4>Add Item</h4><hr style="margin-top: 0px;" />
+        </div>
+        <form (ngSubmit)="addElement(f)" #f="ngForm" >
+            <div class="form-group">
+                <label for="ingredient">Ingredient<font color="red">*</font></label>
+                <input type="text" id="ingredient" class="form-control" name="ingredient"
+                     ngModel required />
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount<font color="red">*</font></label>
+                <input type="number" id="amount" class="form-control" name="amount" 
+                    ngModel required />
+            </div>
+            <div class="form-group">
+                    <label for="unit">Unit</label>
+                    <input type="string" id="unit" class="form-control" name="unit" ngModel />
+                </div>
+            <button type="submit" class="btn btn-primary" >Add</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.total .row{
+    margin: auto;
+    text-align: center;
+}
+.total{
+    margin: auto;
+    box-sizing: border-box;
+    width: 97%;
+    box-shadow: 0 0 10px #aaa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.popular{
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    
+} 
+.heading{
+    position :relative;
+    height: 30px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.heading h4{
+    text-align: left;
+    height: 13px;
+    font-weight: 540;
+    padding-top: 6px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    color: #212121;
+    float: left;
+}
+.btn-right{
+    position: absolute;
+    right: 40px;
+    top: 8px;
+    box-shadow: 2px 2px #ccc;
+}
+
+.box img{
+    border-radius: 50%;
+    transition: 0.2s;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+.box:hover img{
+    transform: scale(1.05); 
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+}
+
+.box h4{
+    margin: auto;
+    text-align: center;
+    color: #f4511e;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    height: 20px;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+<div class="total" style="background-color: #fff;" >
+    <div class="row">
+        <div class="popular">
+            <div class="heading">
+                <h4>Popular Categories</h4>
+                <!-- <button class="btn btn-primary btn-right" type="button">View More</button> -->
+            </div>
+            <hr />
+            <div class="box col-xs-6 col-sm-4 col-md-2" *ngFor="let category of popularCategories">
+                <a routerLink="/result"
+                    [queryParams]="{query: category.name}" >
+                <img [src]="category.imagePath" alt={{category.name}}
+                     width="140" height="140" />
+                <h4>{{ category.name }}</h4>
+                </a>
+            </div>
+        </div>
+    </div>  
+</div>

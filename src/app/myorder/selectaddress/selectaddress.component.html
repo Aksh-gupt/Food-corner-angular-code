@@ -1,0 +1,40 @@
+<div class="box" style="background-color: #fff;" >
+    <p style="padding: 25px; font-size: 25px;"><i class="fa fa-map-marker" style="color: #f4511e;"></i> Select Address</p>
+    <div *ngFor="let add of addressArray;let i = index" >
+        <div class="one notselectedadd" id={{i}} (click)="selectAddress(i)" >
+            <div class="orderid">
+                <div class="oid">Address {{i+1}}</div>
+            </div>
+            <div class="ingres">
+              <p style="font-weight: bold;" >{{add.name}}</p>
+              <p>{{add.address}}</p>
+              <p style="font-weight: bold;" >{{add.pincode}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="newadd" (click)="changenewadd()" *ngIf="!addnewAddress" >
+      <p><i class="fa fa-plus"></i>&nbsp;&nbsp; Add new address</p>
+    </div>
+    <div class="addr" *ngIf="addnewAddress">
+      <h5>ADD NEW ADDRESS</h5>
+      <form (ngSubmit)="addAddress(a)" #a="ngForm" >
+        <div class="name">
+            <input type="text" class="first pers" 
+               name="name" placeholder="Name" ngModel required />
+            <input type="number" class="first pers" name="pincode"
+              style="margin-left: 15px;" placeholder="Pincode" ngModel required />
+        </div> 
+        <div style="margin-bottom: 0%">
+        <textarea type="text"
+              name="address" placeholder="Address" rows="4" ngModel required></textarea>
+        </div>
+        <button type="submit" class="sub">Save and Delivery Here</button>
+        <button type="button" class="cancel" (click)="changenewadd()">
+            Cancel
+        </button>
+      </form>
+    </div>
+    <button type="button" class="sub notsele" style="margin-left: 15px;" (click)="placeOrder()" >
+        Place Order
+    </button>
+</div>
